@@ -1,0 +1,20 @@
+object Versions {
+    const val kotlin = "1.9.0"
+    const val compose = "1.5.0"
+    const val composeCompiler = "1.5.2"
+    const val gradle = "8.1.1"
+    const val detekt = "1.22.0"
+    const val lifecycle = "2.6.1"
+
+    const val immutableCollections = "0.3.5"
+    const val coil = "2.3.0"
+    const val koin = "3.4.2"
+    const val accompanist = "0.32.0"
+    const val dataStore = "1.0.0"
+    const val work = "2.8.1"
+    const val retrofit = "2.9.0"
+    const val lottie = "6.0.0"
+    const val material3 = "1.1.1"
+    const val glance = "1.0.0-rc01"
+    const val kotlinxSerialization = "1.5.1"
+}
