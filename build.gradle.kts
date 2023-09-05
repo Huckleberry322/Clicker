@@ -10,8 +10,6 @@ buildscript {
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.kotlin}")
         classpath("io.gitlab.arturbosch.detekt:detekt-gradle-plugin:${Versions.detekt}")
         classpath("com.google.protobuf:protobuf-gradle-plugin:0.9.3")
-        classpath("com.google.gms:google-services:4.3.15")
-        classpath("com.google.firebase:firebase-crashlytics-gradle:2.9.9")
     }
 }
 

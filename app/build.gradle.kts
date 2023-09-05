@@ -7,8 +7,6 @@ plugins {
     id("kotlin-parcelize")
     id("kotlin-kapt")
     id("io.gitlab.arturbosch.detekt")
-    id("com.google.gms.google-services")
-    id("com.google.firebase.crashlytics")
 }
 
 android {
@@ -92,8 +90,6 @@ dependencies {
     App.Animation.all().forEach(::implementation)
 
     App.Koin.all().forEach(::implementation)
-
-    App.Firebase.all().forEach(::implementation)
 
     implementation(General.Date.threeTenBp)
 

@@ -1,4 +1,4 @@
-package com.internal.cleaner.presentation.ui.theme
+package com.mightyhedgehog.clicker.presentation.ui.theme
 
 import androidx.compose.foundation.LocalIndication
 import androidx.compose.foundation.isSystemInDarkTheme
@@ -23,7 +23,7 @@ import com.mightyhedgehog.clicker.presentation.ui.theme.values.typography.typogr
 
 @OptIn(ExperimentalMaterial3WindowSizeClassApi::class)
 @Composable
-fun XCleanerTheme(
+fun ClickerTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     windowSizeClass: WindowSizeClass = WindowSizeClass.calculateFromSize(
         DpSize(width = 500.dp, height = 800.dp)
