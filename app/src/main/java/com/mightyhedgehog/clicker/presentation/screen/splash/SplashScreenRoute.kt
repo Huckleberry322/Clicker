@@ -4,6 +4,7 @@ import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.compose.composable
 import com.mightyhedgehog.clicker.presentation.navigation.NoArgsRoute
+import com.mightyhedgehog.clicker.presentation.navigation.graph.GameGraph
 import com.mightyhedgehog.clicker.presentation.navigation.graph.StartGraph
 import org.koin.androidx.compose.getViewModel
 
@@ -17,6 +18,11 @@ fun NavGraphBuilder.splashDestination(navController: NavController) {
 
         SplashScreen(
             viewModel = vm,
+            navigateToGame = {
+                navController.navigate(GameGraph.route) {
+                    popUpTo(SplashScreenRoute.route) { inclusive = true }
+                }
+            },
         )
     }
 }
