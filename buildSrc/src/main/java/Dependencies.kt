@@ -83,19 +83,6 @@ object App {
         fun all() = listOf(lottie)
     }
 
-    object DetektPlugins {
-        const val composeRules = "ru.kode:detekt-rules-compose:1.2.2"
-    }
-
-    object Koin {
-        const val core = "io.insert-koin:koin-core:${Versions.koin}"
-        const val android = "io.insert-koin:koin-android:${Versions.koin}"
-        const val compose = "io.insert-koin:koin-androidx-compose:${Versions.koin}"
-        const val workManager = "io.insert-koin:koin-androidx-workmanager:${Versions.koin}"
-
-        fun all() = listOf(core, android, compose, workManager)
-    }
-
     object Work {
         const val work = "androidx.work:work-runtime-ktx:${Versions.work}"
     }
@@ -129,7 +116,21 @@ object Data {
 }
 
 object General {
+
     object Date {
         val threeTenBp = "com.jakewharton.threetenabp:threetenabp:1.4.6"
+    }
+
+    object DetektPlugins {
+        const val composeRules = "ru.kode:detekt-rules-compose:1.2.2"
+    }
+
+    object Koin {
+        const val core = "io.insert-koin:koin-core:${Versions.koin}"
+        const val android = "io.insert-koin:koin-android:${Versions.koin}"
+        const val compose = "io.insert-koin:koin-androidx-compose:${Versions.koin}"
+        const val workManager = "io.insert-koin:koin-androidx-workmanager:${Versions.koin}"
+
+        fun all() = listOf(core, android, compose, workManager)
     }
 }

@@ -60,21 +60,15 @@ android {
 }
 
 dependencies {
-    implementation(project(":domain"))
-
-    App.Base.core
-
-    App.Koin.all().forEach(::implementation)
-
     Data.DataStore.all().forEach(::implementation)
-
     implementation(General.Date.threeTenBp)
-
     implementation(Data.Network.retrofit)
     implementation(Data.Network.loggingInterceptor)
     implementation(Data.Json.kotlinxSerialization)
-
-    detektPlugins(App.DetektPlugins.composeRules)
-
+    detektPlugins(General.DetektPlugins.composeRules)
     implementation(Data.Firebase.config)
+    implementation(General.Koin.core)
+    implementation(General.Koin.android)
+
+    implementation(project(":domain"))
 }
