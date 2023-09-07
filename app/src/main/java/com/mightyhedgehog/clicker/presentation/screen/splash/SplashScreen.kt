@@ -1,19 +1,13 @@
 package com.mightyhedgehog.clicker.presentation.screen.splash
 
-import androidx.compose.animation.AnimatedVisibility
-import androidx.compose.animation.fadeIn
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.systemBarsPadding
-import androidx.compose.foundation.layout.width
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
-import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -25,22 +19,19 @@ import androidx.compose.ui.unit.IntSize
 import androidx.compose.ui.unit.dp
 import com.mightyhedgehog.clicker.presentation.core.CollectUiEffect
 import com.mightyhedgehog.clicker.presentation.screen.splash.SplashScreenViewModel.Effect
-import com.mightyhedgehog.clicker.presentation.screen.splash.SplashScreenViewModel.Event
-import com.mightyhedgehog.clicker.presentation.screen.splash.SplashScreenViewModel.State
 import com.mightyhedgehog.clicker.presentation.ui.components.splash.SplashLoading
 import com.mightyhedgehog.clicker.presentation.ui.components.splash.SplashLogo
-import kotlinx.coroutines.delay
 
 @Composable
 fun SplashScreen(
     viewModel: SplashScreenViewModel,
-    navigateToGame: () -> Unit,
+    onGameNavigate: (Long) -> Unit,
 ) {
     SplashScreen()
 
     CollectUiEffect(uiEffect = viewModel.uiEffect) { effect ->
         when (effect) {
-            Effect.NavigateToGame -> navigateToGame()
+            is Effect.NavigateToGame -> onGameNavigate(effect.counter)
         }
     }
 }

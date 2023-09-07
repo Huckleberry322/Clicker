@@ -4,7 +4,10 @@ import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 
 val GameScreenModule = module {
-    viewModel {
-        GameScreenViewModel()
+    viewModel { (counter: Long) ->
+        GameScreenViewModel(
+            counter = counter,
+            saveCounterUseCase = get(),
+        )
     }
 }

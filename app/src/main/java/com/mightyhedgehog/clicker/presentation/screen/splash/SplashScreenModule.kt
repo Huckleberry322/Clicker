@@ -5,6 +5,8 @@ import org.koin.dsl.module
 
 val SplashScreenModule = module {
     viewModel {
-        SplashScreenViewModel()
+        SplashScreenViewModel(
+            getCounterUseCase = get(),
+        )
     }
 }

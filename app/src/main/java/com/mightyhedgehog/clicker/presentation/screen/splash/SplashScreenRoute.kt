@@ -18,8 +18,8 @@ fun NavGraphBuilder.splashDestination(navController: NavController) {
 
         SplashScreen(
             viewModel = vm,
-            navigateToGame = {
-                navController.navigate(GameGraph.route) {
+            onGameNavigate = { counter ->
+                navController.navigate(GameGraph.prepareRoute(counter)) {
                     popUpTo(SplashScreenRoute.route) { inclusive = true }
                 }
             },

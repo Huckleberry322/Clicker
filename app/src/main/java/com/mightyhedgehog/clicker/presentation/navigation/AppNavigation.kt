@@ -27,6 +27,6 @@ fun AppNavigation(
         },
     ) {
         startGraph(navController)
-        gameGraph(navController)
+        gameGraph()
     }
 }

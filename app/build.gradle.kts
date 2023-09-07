@@ -89,7 +89,7 @@ dependencies {
     App.Images.all().forEach(::implementation)
     App.Animation.all().forEach(::implementation)
 
-    App.Koin.all().forEach(::implementation)
+    General.Koin.all().forEach(::implementation)
 
     implementation(General.Date.threeTenBp)
 
@@ -97,7 +97,7 @@ dependencies {
 
     implementation(General.Date.threeTenBp)
 
-    detektPlugins(App.DetektPlugins.composeRules)
+    detektPlugins(General.DetektPlugins.composeRules)
 
     implementation(project(":data"))
     implementation(project(":domain"))

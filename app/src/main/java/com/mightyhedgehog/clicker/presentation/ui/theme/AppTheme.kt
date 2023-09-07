@@ -11,10 +11,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.unit.DpSize
 import androidx.compose.ui.unit.dp
-import com.mightyhedgehog.clicker.presentation.ui.theme.AppRippleTheme
-import com.mightyhedgehog.clicker.presentation.ui.theme.LocalAppColors
-import com.mightyhedgehog.clicker.presentation.ui.theme.LocalAppDimens
-import com.mightyhedgehog.clicker.presentation.ui.theme.LocalAppFonts
 import com.mightyhedgehog.clicker.presentation.ui.theme.values.colors.darkPalette
 import com.mightyhedgehog.clicker.presentation.ui.theme.values.colors.lightPalette
 import com.mightyhedgehog.clicker.presentation.ui.theme.values.dimens.phoneDimens
